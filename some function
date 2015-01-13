@@ -1,0 +1,68 @@
+def fingdByText(self,name):
+  maxTime=TIME
+    while maxTime:
+      try:
+          temp = self.driver.find_element_by_link_text(name)
+          if temp:
+              temp.click()
+              break
+          maxTime-=1
+      except:
+          maxTime-=1
+          sleep(2)
+  if maxTime==0:
+      raise Exception('not found,please up MaxTime')
+def fingdByClasses(self,name):
+  maxTime=TIME
+    while maxTime:
+      try:
+          temp = self.driver.find_elements_by_class_name(name)
+          if temp:
+              return temp
+          maxTime-=1
+      except:
+          maxTime-=1
+          sleep(2)
+  if maxTime==0:
+      raise Exception('not found,please up MaxTime')
+def fingdByTexts(self,name,num):
+  maxTime=TIME
+    while maxTime:
+      try:
+          temp = self.driver.find_elements_by_link_text(name)
+          if temp:
+              temp[num].click()
+              break
+          maxTime-=1
+      except:
+          maxTime-=1
+          sleep(2)
+  if maxTime==0:
+      raise Exception('not found,please up MaxTime')
+def fingdByText_NotClick(self,name):
+  maxTime=TIME
+    while maxTime:
+      try:
+          temp = self.driver.find_element_by_link_text(name)
+          if temp:
+              return True
+          maxTime-=1
+      except:
+          maxTime-=1
+          sleep(2)
+  if maxTime==0:
+      raise Exception('not found,please up MaxTime')
+def fingdById(self,id):
+  maxTime=TIME
+    while maxTime:
+      try:
+          temp = self.driver.find_element_by_id(id)
+          if temp:
+              temp.click()
+              break
+          maxTime-=1
+      except:
+          maxTime-=1
+          sleep(2)
+  if maxTime==0:
+      raise Exception('not found,please up MaxTime')
